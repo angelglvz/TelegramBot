@@ -6,7 +6,7 @@ from .services import send_telegram_message
 
 @csrf_exempt
 @require_POST
-def telegram_webhook(funct, request):
+def telegram_webhook(request):
     """Endpoint que recibe los eventos (updates) enviados por Telegram."""
     try:
         data = json.loads(request.body.decode("utf-8"))
